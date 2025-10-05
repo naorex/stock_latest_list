@@ -197,16 +197,6 @@ wheels = [
 ]
 
 [[package]]
-name = "pip-review"
-version = "1.3.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "packaging" },
-    { name = "pip" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/f7/e8/bcb143f21668de2c285ce3d73041ba035b2340fb44bdd95ee04b3e313d09/pip-review-1.3.0.tar.gz", hash = "sha256:886fc48503a6ec99851036f30a6be07ce7e4610d1491786affecb7a364eddeda", size = 6644, upload-time = "2022-11-29T16:45:35.122Z" }
-
-[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -284,7 +274,6 @@ dependencies = [
     { name = "pandas" },
     { name = "pandas-stubs" },
     { name = "pip" },
-    { name = "pip-review" },
     { name = "python-dateutil" },
     { name = "pytz" },
     { name = "requests" },
@@ -310,7 +299,6 @@ requires-dist = [
     { name = "pandas", specifier = "==2.3.3" },
     { name = "pandas-stubs", specifier = "==2.3.2.250926" },
     { name = "pip", specifier = "==25.2" },
-    { name = "pip-review", specifier = "==1.3.0" },
     { name = "python-dateutil", specifier = "==2.9.0.post0" },
     { name = "pytz", specifier = "==2025.2" },
     { name = "requests", specifier = "==2.32.5" },
