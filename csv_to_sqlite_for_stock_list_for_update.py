@@ -1,5 +1,6 @@
 import glob
 import sqlite3
+from pathlib import Path
 
 import pandas as pd
 import tqdm
@@ -20,11 +21,18 @@ def job_update_db():
 
     for file_ in tqdm.tqdm(file_list):
 
+        # Pathオブジェクト
+        p = Path(file_)
+
         # csv読み込み
         df = pd.read_csv(file_, index_col=0)
 
-        # テーブル名称とする文字列を設定
-        table_name = file_.split("\\")[-1].split(".")[0]
+        # 拡張子を除いたファイル名を一発で取得
+        table_name = p.stem
+
+        # もし table_name が空だったらスキップ
+        if not table_name:
+            continue
 
         # csvをSQLへ書き込み
         df.to_sql(
